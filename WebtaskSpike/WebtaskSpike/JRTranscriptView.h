@@ -3,6 +3,8 @@
 //   Some rights reserved: http://opensource.org/licenses/mit
 //   https://github.com/rentzsch/JRTranscriptView
 
+#import <UIKit/UIKit.h>
+
 @interface JRTranscriptView : UIView
 @property(nonatomic, strong)  UIFont  *defaultFont;  // Menlo 10 by default.
 
