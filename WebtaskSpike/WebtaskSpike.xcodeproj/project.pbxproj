@@ -13,6 +13,7 @@
 		6406D8CE1D1370210094CE22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6406D8CC1D1370210094CE22 /* Main.storyboard */; };
 		6406D8D01D1370210094CE22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6406D8CF1D1370210094CE22 /* Assets.xcassets */; };
 		6406D8D31D1370210094CE22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6406D8D11D1370210094CE22 /* LaunchScreen.storyboard */; };
+		6406D8DC1D1371070094CE22 /* JRTranscriptView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6406D8DB1D1371070094CE22 /* JRTranscriptView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		6406D8CF1D1370210094CE22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6406D8D21D1370210094CE22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6406D8D41D1370210094CE22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6406D8DA1D1371070094CE22 /* JRTranscriptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRTranscriptView.h; sourceTree = "<group>"; };
+		6406D8DB1D1371070094CE22 /* JRTranscriptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRTranscriptView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				6406D8C71D1370210094CE22 /* AppDelegate.m */,
 				6406D8C91D1370210094CE22 /* ViewController.h */,
 				6406D8CA1D1370210094CE22 /* ViewController.m */,
+				6406D8DA1D1371070094CE22 /* JRTranscriptView.h */,
+				6406D8DB1D1371070094CE22 /* JRTranscriptView.m */,
 				6406D8CC1D1370210094CE22 /* Main.storyboard */,
 				6406D8CF1D1370210094CE22 /* Assets.xcassets */,
 				6406D8D11D1370210094CE22 /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			files = (
 				6406D8CB1D1370210094CE22 /* ViewController.m in Sources */,
 				6406D8C81D1370210094CE22 /* AppDelegate.m in Sources */,
+				6406D8DC1D1371070094CE22 /* JRTranscriptView.m in Sources */,
 				6406D8C51D1370210094CE22 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +306,7 @@
 				6406D8D91D1370210094CE22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
