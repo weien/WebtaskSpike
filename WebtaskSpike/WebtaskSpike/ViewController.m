@@ -58,7 +58,7 @@
     NSString* formattedString = [NSString stringWithFormat:@"\n%@",text];
     NSMutableAttributedString* styledString = [[NSMutableAttributedString alloc] initWithString:formattedString];
     NSDictionary* attributes = @{NSForegroundColorAttributeName : [UIColor redColor]};
-    [styledString addAttributes:attributes range:NSMakeRange(0, text.length)];
+    [styledString addAttributes:attributes range:NSMakeRange(0, text.length+1)];
     return styledString;
 }
 
@@ -75,8 +75,7 @@
                                                 callback(nil);
                                             }
                                             else {
-                                                NSString* replyString = [[NSString alloc] initWithData:data
-                                                                                               encoding:NSUTF8StringEncoding];
+                                                NSString* replyString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                                                 callback(replyString);
                                             }
                                         }];
