@@ -77,10 +77,13 @@
     NSString* fullURLString = [@"https://webtask.it.auth0.com/api/run/wt-weienw-gmail_com-0/wtbot?text="  stringByAppendingString:escapedString];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:fullURLString]];
     NSURLSession *session = [NSURLSession sharedSession];
+    
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     NSURLSessionTask* task = [session dataTaskWithRequest:request
                                         completionHandler:^(NSData * _Nullable data,
                                                             NSURLResponse * _Nullable response,
                                                             NSError * _Nullable error) {
+                                            [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                                             if (error) {
                                                 NSLog(@"Webtask error is %@", error);
                                                 callback(nil);
