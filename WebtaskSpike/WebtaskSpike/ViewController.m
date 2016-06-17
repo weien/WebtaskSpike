@@ -68,7 +68,8 @@
 }
 
 - (void) tellWebtaskBot:(NSString*)text callback:(void (^)(NSString* reply))callback {
-    NSString* fullURLString = [@"https://webtask.it.auth0.com/api/run/wt-weienw-gmail_com-0/wtbot?text=" stringByAppendingString:text];
+    NSString * escapedString = [text stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSString* fullURLString = [@"https://webtask.it.auth0.com/api/run/wt-weienw-gmail_com-0/wtbot?text="  stringByAppendingString:escapedString];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:fullURLString]];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionTask* task = [session dataTaskWithRequest:request
