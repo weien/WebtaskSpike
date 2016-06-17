@@ -36,8 +36,13 @@
         [self.transcriptView appendAttributedString:styledString];
         [self tellWebtaskBot:textField.text callback:^(NSString *reply) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                NSAttributedString* styledReply = [self botAttributedStringWithText:reply];
-                [self.transcriptView appendAttributedString:styledReply];
+                if (reply) {
+                    NSAttributedString* styledReply = [self botAttributedStringWithText:reply];
+                    [self.transcriptView appendAttributedString:styledReply];
+                }
+                else {
+                    NSLog(@"Reply is nil");
+                }
             });
         }];
         textField.text = @"";
