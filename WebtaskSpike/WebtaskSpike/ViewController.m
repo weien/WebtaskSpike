@@ -12,7 +12,7 @@
 @interface ViewController () <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet JRTranscriptView *transcriptView;
 @property (strong, nonatomic) IBOutlet UITextField *mainTextField;
-
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *textFieldToViewBottomConstraint;
 @end
 
 @implementation ViewController
@@ -20,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    self.mainTextField.hidden = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -87,6 +92,12 @@
                                             }
                                         }];
     [task resume];
+}
+
+- (void)keyboardWasShown:(NSNotification *)notification {
+    self.mainTextField.hidden = NO;
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    self.textFieldToViewBottomConstraint.constant = keyboardSize.height;
 }
 
 @end

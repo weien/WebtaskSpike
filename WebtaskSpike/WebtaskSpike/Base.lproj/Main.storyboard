@@ -40,6 +40,7 @@
                     </view>
                     <connections>
                         <outlet property="mainTextField" destination="el8-eS-SEM" id="Ewo-Gb-Gbj"/>
+                        <outlet property="textFieldToViewBottomConstraint" destination="BfG-Lj-Mom" id="Drs-0j-OFz"/>
                         <outlet property="transcriptView" destination="Uau-OE-Vdo" id="O8w-bJ-yka"/>
                     </connections>
                 </viewController>
