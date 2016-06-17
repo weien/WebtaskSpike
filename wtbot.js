@@ -7,6 +7,10 @@ module.exports = function(ctx, cb) {
         }
 		data.push(ctx.data.text);
 		
+		//uncomment to clear the storage out
+		//var emptyArray = [];
+    	//data = emptyArray;
+		
         ctx.storage.set(data, function (error) {
             if (error) return cb(error);
         });

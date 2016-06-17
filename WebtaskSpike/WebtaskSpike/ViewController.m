@@ -82,7 +82,8 @@
                                             }
                                             else {
                                                 NSString* replyString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                                callback(replyString);
+                                                NSString* stringWithoutOutsideQuotes = [[replyString substringFromIndex:1] substringToIndex:[replyString length]-2];
+                                                callback(stringWithoutOutsideQuotes);
                                             }
                                         }];
     [task resume];
