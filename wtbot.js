@@ -5,10 +5,10 @@ module.exports = function(ctx, cb) {
         	var emptyArray = [];
         	data = emptyArray;
         }
-		data.push(ctx.data.text);
+	data.push(ctx.data.text);
 		
-		//uncomment to clear the storage out
-		//var emptyArray = [];
+	//uncomment to clear the storage out
+	//var emptyArray = [];
     	//data = emptyArray;
 		
         ctx.storage.set(data, function (error) {
