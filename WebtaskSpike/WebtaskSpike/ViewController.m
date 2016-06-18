@@ -25,6 +25,8 @@
                                                  name:UIKeyboardDidShowNotification
                                                object:nil];
     self.mainTextField.hidden = YES;
+    
+    [self.transcriptView appendAttributedString:[self botAttributedStringWithText:NSLocalizedString(@"Hello", nil)]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
